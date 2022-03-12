@@ -1,0 +1,158 @@
+import sys
+import math
+# a=[]
+# for x in range(10):
+#     a.append(x**2)
+# print(a)
+# b=[]
+# for y in range(6):
+#     b.append(3**y)
+# print(b)
+# c=[]
+# for z in a:
+#     if z%2==1:
+#         c.append(z)
+# print(c)
+
+#wersja z python comprehension
+# a=[x**2 for x in range(10)]
+# b=[3**i for i in range(6)]
+# c=[x for x in a if x%2==1]
+# print(a)
+# print(b)
+# print(c)
+
+
+
+#przykład drugi
+# liczby=[1,2,3,4,5,6,7,8,9,10]
+# lista=[]
+# for i in liczby:
+#     if i%2==0:
+#         lista.append(i)
+# print('Liczby parzyste uzyskane z wykorzystaniem pętli')
+# print(lista)
+# print()
+#
+# lista2=[i for i in liczby if i%2==0]
+# print(lista2)
+
+
+
+
+#przykład trzeci zagnieżdżenia
+# lista=[]
+# for i in[1,2,3]:
+#     for j in[4,5,6]:
+#         lista.append((i,j))
+# print(lista)
+#
+# lista2=[(i,j) for i in[1,2,3] for j in[4,5,6]]
+# print(lista2)
+
+
+
+
+#przykład czwarty
+#wersja z pętlą
+# skroty={"PZU":"Państwowy zakład ubezpieczeń",
+#         "ZUS":"Zakład ubezpieczeń społecznych",
+#         "PKO":"Państwowa kasa oszczędności"}
+# odwrocone={}
+# for key,value in skroty.items():
+#     odwrocone[value]=key
+# print(odwrocone)
+#
+# odwrocone2={value: key for key, value in skroty.items()}
+# print(odwrocone2)
+
+
+
+#definiowanie funkcji
+#pierwiastki równania kwadratowego
+# def row_kwadratowe(a,b,c):
+#     delta=b**2-4*a*c
+#     if delta<0:
+#         print("brak pierwiastków")
+#         return -1
+#     elif delta==0:
+#         print("jeden pierwiastek")
+#         x=(-b)/(2*a)
+#         return x
+#     else:
+#         print("dwa pierwiastki")
+#         x1=(-b-math.sqrt(delta))/(2*a)
+#         x2=(-b+math.sqrt(delta))/(2*a)
+#         return x1,x2
+# print(row_kwadratowe(6,1,3))
+# print(row_kwadratowe(1,2,1))
+# print(row_kwadratowe(1,4,1))
+
+
+
+#przykład dwa
+# def dlugosc_odcinka(x1=0,y1=0,x2=0,y2=0):
+#     return math.sqrt((x2-x1)**2+(y2-y1)**2)
+# print(dlugosc_odcinka(x2=5,y2=5))
+
+#przykład trzeci
+# def ciag(*liczby):
+#     #jeżeli nie ma argumentów to
+#     if len(liczby)==0:
+#         return 0
+#     else:
+#         suma=0
+#         #sumujemy elementy ciągu
+#         for i in liczby:
+#             suma+=i
+#         #zwracamy wartość sumy
+#         return suma
+# print(ciag(1,2,3.5,4,5,6,7,8))
+
+
+#przykład czwarty
+# def to_lubie(**rzeczy):
+#     for cos in rzeczy:
+#         print("to jest ")
+#         print(cos)
+#         print(" co lubie ")
+#         print(rzeczy[cos])
+# to_lubie(slodycze="czekolada", rozrywka=['gry','filmy'])
+
+
+# import litery
+# a="Ala ma kota"
+# litery.wyswietl(a)
+# print((litery.dlugosc(a)))
+# print(dir(litery))
+#
+
+
+
+#zadanie1
+# a=[1-x for x in range(10)]
+# b=[4**i for i in range(8)]
+# c=[x for x in b if x%2==0]
+# print(a)
+# print(b)
+# print(c)
+
+
+#zad2
+# from random import randint
+# lista1 = []
+# for i in range(0, 10):
+#     lista1.append(randint(0, 100))
+# print(lista1)
+# lista2=[i for i in lista1 if i%2==0]
+# print(lista2)
+
+
+#zad3
+skroty={"pomarancza":"kg",
+        "bulka":"szt",
+        "banany":"kg",
+        "napoj":"szt"}
+print(skroty)
+odwrocone2={key: "szt" for key, value in skroty.items()}
+print(odwrocone2)
